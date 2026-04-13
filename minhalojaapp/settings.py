@@ -49,9 +49,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'categories.apps.CategoriesConfig',
     'products.apps.ProductsConfig',
-    'apps.persons',
+    #'apps.persons',
     'apps.socialnetworks',
+    'persons.apps.PersonsConfig',
     'clients.apps.ClientsConfig',
+    'employees.apps.EmployeesConfig',
 ]
 
 MIDDLEWARE = [
