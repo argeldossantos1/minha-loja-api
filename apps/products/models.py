@@ -8,8 +8,8 @@ class Product(models.Model):
     fabrication_date = models.DateField('Data Fabricacao', auto_now=False, auto_now_add=False) 
     is_active = models.BooleanField('Ativo', default=False)
     price = models.DecimalField('Preço', max_digits=10, decimal_places=2, default=0)
-    photo = models.ImageField('Foto', upload_to='photos')
-    doc = models.FileField('Documentos', upload_to='docs')
+    photo = models.ImageField('Foto', upload_to='photos', null=True, blank=True)
+    doc = models.FileField('Documentos', upload_to='docs', null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     class Meta:
