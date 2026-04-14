@@ -18,6 +18,9 @@ from django.contrib import admin
 # from django.urls import path
 from django.urls import path, include
 
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +30,12 @@ urlpatterns = [
     path('redessociais/', include('apps.socialnetworks.urls')),
     path('clientes/', include('clients.urls', namespace='clients')),
     path('funcionarios/', include('employees.urls', namespace='employees')),
+    path('pedidos/', include('orders.urls', namespace='orders')),
+    path('itens_pedido/', include('orderitems.urls', namespace='orderitems')),
+    path('notas/', include('invoices.urls', namespace='invoices')),
+
+
 ]
+
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

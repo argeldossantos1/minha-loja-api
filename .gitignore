@@ -20,3 +20,12 @@
 
 /apps/clients/__pycache__/*
 /apps/clients/migrations/*
+
+/apps/orders/__pycache__/*
+/apps/orders/migrations/*
+
+/apps/orderitems/__pycache__/*
+/apps/orderitems/migrations/*
+
+/apps/invoices/__pycache__/*
+/apps/invoices/migrations/*
